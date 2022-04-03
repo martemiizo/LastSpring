@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa.generate-ddl: true
+  jpa.database: postgresql
+  jpa.database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+  jpa:
+    show-sql: false
+---
+server:
+  port: 8181
+
+---
+jwt:
+  secret:
+    access: secret
+    refresh: freshsecret
